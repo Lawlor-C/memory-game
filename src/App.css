@@ -4,17 +4,5 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
-  background-color: #f9f9f9; /* Neutral background */
+  background-color: #640404; 
 }
-
-/* Base utility for game cards or elements */
-.card {
-  padding: 1rem;
-  margin: 0.5rem;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  background-color: #ffffff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}
-
-/*Moving the above to own component once set up
