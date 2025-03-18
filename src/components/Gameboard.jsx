@@ -2,14 +2,22 @@ import { cardsArray } from "../data/cardData";
 import Card from "./Card";
 import "../styles/Gameboard.css"
 
-export default function Gameboard(){ 
+export default function Gameboard() {
+    const selectedSet = "test";
+    const { cards, backImage } = cardsArray[selectedSet];
+    
     return (
         <div className="gameboard">
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
-        <Card></Card>
+        {cards.map((card) => (
+        <Card
+        key={card.id}
+        content={card.content}
+        image={card.image}
+        backImage={backImage}
+        isFlipped={false}
+        handleCardClick={() => console.log(`Clicked card ${card.id}`)}
+        />
+        ))}
         </div>
-    )
-
+    );
 }
