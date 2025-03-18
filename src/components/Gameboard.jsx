@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { cardsArray } from "../data/cardData";
 import Card from "./Card";
 import "../styles/Gameboard.css"
