@@ -4,11 +4,29 @@ import Card from "./Card";
 import "../styles/Gameboard.css"
 
 export default function Gameboard() {
+    
     const selectedSet = "test";
     const { cards, backImage } = cardsArray[selectedSet];
     const doubleSelectedSet = [...cards, ...cards];
     const shuffleArray = (array) => array.sort(() => Math.random() - 0.5);
     const shuffledCards = shuffleArray(doubleSelectedSet);
+    
+    const initialFlipState = shuffledCards.map((card, index) => ({
+        index: index,
+        isFlipped: false,
+    }));
+    const [flipState, setFlipState] = useState(initialFlipState);
+
+    const handleCardClick = (index) => {
+        console.log(`Clicked card at index ${index}`);
+        setFlipState(prevState =>
+            prevState.map((card, i) =>
+                i === index ? { ...card, isFlipped: !card.isFlipped } : card
+            )
+        );
+    };
+    
+      
 
     
     
@@ -20,9 +38,9 @@ export default function Gameboard() {
         content={card.content}
         image={card.image}
         backImage={backImage}
-        isFlipped={false}
+        isFlipped={flipState[index].isFlipped}
         isMatched={false}
-        handleCardClick={() => console.log(`Clicked card ${card.id}`)}
+        handleCardClick={() => handleCardClick(index)}
         />
         ))}
         </div>
