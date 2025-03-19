@@ -1,6 +1,6 @@
 import "../styles/Card.css"
 
-export default function Card({ content, image, backImage, isFlipped, handleCardClick }) {
+export default function Card({ content, image, backImage, isFlipped, isMatched, handleCardClick }) {
   return (
     <div
       className={`card ${isFlipped ? "flipped" : ""}`}
