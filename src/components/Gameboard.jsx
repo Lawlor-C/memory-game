@@ -1,9 +1,10 @@
 import { useState } from "react";
+import 'animate.css';
 import { cardsArray } from "../data/cardData";
 import Card from "./Card";
 import "../styles/Gameboard.css";
 
-//whole Gameboard
+//whole Gameboard - will streamline into utils once all functioning correctly
 export default function Gameboard() {
   const selectedSet = "test"; //Hardcoding this as test for now
   const { cards, backImage } = cardsArray[selectedSet];
@@ -22,10 +23,19 @@ export default function Gameboard() {
     uniqueId: card.uniqueId,
     isFlipped: false,
   }));
+  const [flippedCards, setFlippedCards] = useState([]);
   const [flipState, setFlipState] = useState(initialFlipState);
 
-  //Flip card when clicked (should not affect other cards)
+  //Flip card when clicked (should not affect other cards - updated to put clicked cards into a new array, max 2)
   const handleCardClick = (uniqueId) => {
+    console.log(`Clicked card with ID ${uniqueId}`);
+    setFlippedCards((prev) => {
+        if (prev.length < 2) {
+            return [...prev, uniqueId];        
+        }
+        return prev;
+    });
+
     setFlipState((prevState) =>
       prevState.map((card) =>
         card.uniqueId === uniqueId
