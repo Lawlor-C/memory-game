@@ -27,6 +27,16 @@ const cardsArray = {
         content: "blueHeart",
         image: "/assets/gamecards/hearts/htdblue.png",
       },
+      {
+        id: 3,
+        content: "blackHeart",
+        image: "/assets/gamecards/hearts/htblack.png",
+      },
+      {
+        id: 4,
+        content: "greenHeart",
+        image: "/assets/gamecards/hearts/htgreen.png",
+      },
     ],
   },
 };
