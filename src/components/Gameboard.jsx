@@ -32,10 +32,20 @@ export default function Gameboard() {
   const [flippedCards, setFlippedCards] = useState([]);
   const [flipState, setFlipState] = useState(initialFlipState);
 
+  //Adding a state to prevent a card being clicked whilst unmatched choices are flipped back around
+  const [isProcessing, setIsProcessing] = useState(false);
+
+
 
 
   //Interact with cards via click...
   const handleCardClick = (uniqueId) => {
+    //...but not if processing an unmatched attempt
+    if (isProcessing) {
+        console.log("Timeout Active - Please Wait");
+        return;
+    }
+
     //...but not if already matched...
     const clickedMatched = flipState.find(card => card.uniqueId === uniqueId);
     if (clickedMatched.isMatched) {
@@ -72,6 +82,9 @@ export default function Gameboard() {
   //Effect to kick in once the temp array holds two cards, compare content for match
   useEffect(() => {
     if (flippedCards.length === 2) {
+        //Prevent clicks if unmatched pairs still processing
+        setIsProcessing(true);
+
         const [firstCard, secondCard] = flippedCards;
         const firstCardContent = shuffledCards.find(card => card.uniqueId === firstCard).content;
         const secondCardContent = shuffledCards.find(card => card.uniqueId === secondCard).content;
@@ -95,9 +108,13 @@ export default function Gameboard() {
             : card
         )
     );
+    setIsProcessing(false);
             }, 1000);
         }
         setFlippedCards([]);
+        if (firstCardContent === secondCardContent){
+            setIsProcessing(false);
+        }
     }
   }, [flippedCards, shuffledCards]);
 

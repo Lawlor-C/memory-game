@@ -1,6 +1,6 @@
 .gameboard {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for 4 cards */
+    grid-template-columns: repeat(4, 1fr); /* 2 columns for 4 cards */
     gap: 1rem; /* Space between cards */
     justify-content: center;
     margin: 1rem auto;
