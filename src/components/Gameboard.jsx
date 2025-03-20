@@ -34,8 +34,20 @@ export default function Gameboard() {
 
 
 
-  //Interact with cards via click
+  //Interact with cards via click...
   const handleCardClick = (uniqueId) => {
+    //...but not if already matched...
+    const clickedMatched = flipState.find(card => card.uniqueId === uniqueId);
+    if (clickedMatched.isMatched) {
+        console.log("Card Already Matched");
+        return;
+    }
+    //...and also not the card just clicked
+    if (flippedCards.includes(uniqueId)) {
+        console.log("Card Already Flipped");
+        return;
+    }
+
     console.log(`Clicked card with ID ${uniqueId}`);
 
     //Add clicked cards (max 2) into temp array to prepare to check for match
