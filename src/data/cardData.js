@@ -59,5 +59,50 @@ const cardsArray = {
       },
     ],
   },
+  tortoise: {
+    backImage: "/assets/gamecards/tortoise/tortshrug.png",
+    cards: [
+      {
+        id: 1,
+        content: "beeTortoise",
+        image: "/assets/gamecards/tortoise/tortbee.png",
+      },
+      {
+        id: 2,
+        content: "bellTortoise",
+        image: "/assets/gamecards/tortoise/tortbel.png",
+      },
+      {
+        id: 3,
+        content: "bananaTortoise",
+        image: "/assets/gamecards/tortoise/tortbnana.png",
+      },
+      {
+        id: 4,
+        content: "clownTortoise",
+        image: "/assets/gamecards/tortoise/tortclown.png",
+      },
+      {
+        id: 5,
+        content: "flipTortoise",
+        image: "/assets/gamecards/tortoise/tortflip.png",
+      },
+      {
+        id: 6,
+        content: "hotTortoise",
+        image: "/assets/gamecards/tortoise/torthot.png",
+      },
+      {
+        id: 7,
+        content: "coolTortoise",
+        image: "/assets/gamecards/tortoise/tortshades.png",
+      },
+      {
+        id: 8,
+        content: "unicornTortoise",
+        image: "/assets/gamecards/tortoise/tortuni.png",
+      },
+    ],
+  },
 };
 export { cardsArray };

@@ -9,7 +9,7 @@ import "../styles/Gameboard.css";
 
 //whole Gameboard - will streamline into utils once all functioning correctly
 export default function Gameboard() {
-  const selectedSet = "hearts"; //Hardcoding this as test for now
+  const selectedSet = "tortoise"; //Hardcoding this as test for now
   const { cards, backImage } = cardsArray[selectedSet];
 
 
