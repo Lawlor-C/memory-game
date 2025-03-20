@@ -9,7 +9,7 @@ import "../styles/Gameboard.css";
 
 //whole Gameboard - will streamline into utils once all functioning correctly
 export default function Gameboard() {
-  const selectedSet = "test"; //Hardcoding this as test for now
+  const selectedSet = "hearts"; //Hardcoding this as test for now
   const { cards, backImage } = cardsArray[selectedSet];
 
 
@@ -17,7 +17,7 @@ export default function Gameboard() {
   //Need to duplicate the cards so can be paired (trial and error with uniqueness)
   const doubleSelectedSet = [...cards, ...cards].map((card, index) => ({
     ...card,
-    uniqueId: `${card.id}-${index}`,
+    uniqueId: `${selectedSet}-${card.id}-${index}`,
   }));
   //Randomise the double-deck (but create them only once)
   const shuffleArray = (array) => array.sort(() => Math.random() - 0.5);

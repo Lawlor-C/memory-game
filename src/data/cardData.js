@@ -13,21 +13,21 @@ const cardsArray = {
         image: "/assets/gamecards/testcards/test2.png",
       },
     ],
-    hearts: {
-      backImage: "/assets/gamecards/hearts/htback.png",
-      cards: [
-        {
-          id: 1,
-          content: "redHeart",
-          image: "/assets/gamecards/hearts/htred.png",
-        },
-        {
-          id: 2,
-          content: "blueHeart",
-          image: "/assets/gamecards/hearts/htblue.png",
-        },
-      ],
-    },
+  },
+  hearts: {
+    backImage: "/assets/gamecards/hearts/htback.png",
+    cards: [
+      {
+        id: 1,
+        content: "redHeart",
+        image: "/assets/gamecards/hearts/htred.png",
+      },
+      {
+        id: 2,
+        content: "blueHeart",
+        image: "/assets/gamecards/hearts/htdblue.png",
+      },
+    ],
   },
 };
 export { cardsArray };
