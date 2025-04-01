@@ -16,6 +16,7 @@ const cardsArray = {
   },
   hearts: {
     backImage: "/assets/gamecards/hearts/htback.png",
+    backColor: "#3c5291",
     cards: [
       {
         id: 1,
