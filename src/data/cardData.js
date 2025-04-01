@@ -61,6 +61,7 @@ const cardsArray = {
   },
   tortoise: {
     backImage: "/assets/gamecards/tortoise/tortshrug.png",
+    backColor: "#3c5291",
     cards: [
       {
         id: 1,

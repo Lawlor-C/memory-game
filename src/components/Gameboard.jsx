@@ -10,7 +10,7 @@ import "../styles/Gameboard.css";
 //whole Gameboard - will streamline into utils once all functioning correctly
 export default function Gameboard() {
   const selectedSet = "tortoise"; //Hardcoding this as test for now
-  const { cards, backImage } = cardsArray[selectedSet];
+  const { cards, backImage, backColor } = cardsArray[selectedSet];
 
 
 
@@ -131,8 +131,9 @@ export default function Gameboard() {
             content={card.content}
             image={card.image}
             backImage={backImage}
+            backColor={backColor}
             isFlipped={flippedState.isFlipped}
-            isMatched={false}
+            isMatched={flippedState.isMatched}
             handleCardClick={() => handleCardClick(card.uniqueId)}
           />
         );

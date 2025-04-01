@@ -1,8 +1,51 @@
 .card {
-    padding: 1rem;
-    margin: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 50px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  /* Set a reasonable default size for your cards */
+  width: 150px;
+  height: 150px;
+  /* Keep the card container well-defined */
+  border-radius: 8px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: transform 0.6s;
+  position: relative;
+  overflow: hidden; /* Prevents image overflow */
+  /* Add spacing if needed */
+  margin: 6px;
+  /* Optional: box shadow for a card-like effect */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Makes images cover the entire card area */
+  display: block; /* Removes any extra space below images */
+}
+@keyframes spin {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(540deg);
+  } /* Two full spins */
+}
+
+.card.matched {
+  background: #000000;
+  background: -moz-radial-gradient(center, #000000 0%, #02cb0f 100%);
+  background: -webkit-radial-gradient(center, #000000 0%, #02cb0f 100%);
+  background: radial-gradient(ellipse at center, #000000 0%, #02cb0f 100%);
+  animation: spin 1.5s ease-in-out;
+  opacity: 0.5;
+  pointer-events: none;
+  transition: opacity 1.5s ease, background 1.5s ease;
+
+  /* Add a solid gold border */
+  border: 5px solid gold;
+  box-sizing: border-box;
+  border-radius: 8px; /* Keep the existing rounded corners */
+}
+
+.card.flipped {
+  transform: rotateY(180deg);
 }
