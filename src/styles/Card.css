@@ -36,9 +36,7 @@
   animation: spin 1.5s ease-in-out;
   opacity: 0.5;
   pointer-events: none;
-  transition: opacity 1.5s ease, background 1.5s ease;
-
-  /* Add a solid gold border */
+  transition: opacity 1.5s ease, background 1.5s ease;  
   border: 5px solid gold;
   box-sizing: border-box;
   border-radius: 8px;
