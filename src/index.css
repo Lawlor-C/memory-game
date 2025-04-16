@@ -1,18 +1,20 @@
 :root {
-  font-family: 'Arial', sans-serif; /* Customize to your liking */
+  font-family: 'Arial', sans-serif; /* Global font family */
   line-height: 1.5;
   font-weight: 400;
   color: #000; /* Black text for readability */
-  background-color: #f9f9f9; /* Light background for a clean look */
+  /* Removed background-color so that component-level backgrounds can show through */
 }
 
 body {
   margin: 0;
   display: flex;
-  place-items: center; /* Center content */
+  place-items: center;  /* Centers content vertically and horizontally */
   min-height: 100vh;
+  background-color: #f9f9f9; /* Retain a light neutral background for the overall page */
 }
 
+/* Button styles retain your design */
 button {
   border-radius: 6px;
   padding: 0.5em 1em;
@@ -24,9 +26,11 @@ button {
   border: none;
   transition: background-color 0.3s ease;
 }
+
 button:hover {
   background-color: #0056b3;
 }
+
 button:focus {
   outline: 2px solid #0056b3;
 }

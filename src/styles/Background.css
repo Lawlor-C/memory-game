@@ -1,0 +1,50 @@
+/* Background.css */
+.background {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* Left sidebar takes up available space on the left */
+.sidebar-left {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #c8ff11;
+  background: -moz-linear-gradient(left, #c8ff11 0%, #b4cb06 15%, #640404 100%);
+  background: -webkit-linear-gradient(
+    left,
+    #c8ff11 0%,
+    #b4cb06 15%,
+    #640404 100%
+  );
+  background: linear-gradient(to right, #c8ff11 0%, #b4cb06 15%, #640404 100%);
+}
+
+/* Center content (.App) gets a fixed width and remains centered */
+.App {
+  flex: 0 0 600px; /* Adjust this width as needed for your design */
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Right sidebar takes up available space on the right */
+.sidebar-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #640404;
+  background: -moz-linear-gradient(left, #640404 0%, #b4cb06 85%, #c8ff11 100%);
+  background: -webkit-linear-gradient(
+    left,
+    #640404 0%,
+    #b4cb06 85%,
+    #c8ff11 100%
+  );
+  background: linear-gradient(to right, #640404 0%, #b4cb06 85%, #c8ff11 100%);
+}

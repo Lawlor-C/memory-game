@@ -2,7 +2,7 @@
   width: 150px;
   height: 150px;
   /* Keep the card container well-defined */
-  border-radius: 8px;
+  border-radius: 18px;
   box-sizing: border-box;
   cursor: pointer;
   transition: transform 0.6s;
@@ -39,7 +39,7 @@
   transition: opacity 1.5s ease, background 1.5s ease;  
   border: 5px solid gold;
   box-sizing: border-box;
-  border-radius: 8px;
+  border-radius: 18px;
 }
 
 .card.flipped {
